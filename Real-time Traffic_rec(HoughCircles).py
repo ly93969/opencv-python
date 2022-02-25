@@ -29,7 +29,7 @@ while True:
                 max_i = i
                 max_r = cir[:, :, 2][0][i]
         x, y, r = cir[:, :, :][0][max_i]
-        if y > r and x > r:
+        if y > r and x > r and 2 * r > 300:
             square = imgOriginal[y - r:y + r, x - r:x + r]
             img_gray = cv2.cvtColor(square, cv2.COLOR_BGR2GRAY)
             cv2.imshow('img_gray', img_gray)
